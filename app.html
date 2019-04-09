@@ -1,0 +1,217 @@
+<html>
+
+<head>
+  <title>摇号</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link href="./css/style.css" type="text/css" rel="stylesheet" media="screen, projection">
+  <link href="./css/style1.css" type="text/css" rel="stylesheet" media="screen, projection">
+  <link href="./css/ui-dialog.css" type="text/css" rel="stylesheet" media="screen, projection">
+  <style>
+    .btn {
+      display: inline-block;
+      width: 100px;
+      height: 30px;
+      text-align: center;
+      line-height: 30px;
+      text-decoration: none;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      padding: 5px;
+    }
+
+    .opt {
+      text-decoration: none;
+      padding: 5;
+      border-radius: 5px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      width: 100px;
+      display: inline-block;
+      margin-bottom: 5px;
+      background: #9c9c9c;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="model hide" style="width:300px;height:350px;">
+    <a href="#" target="_blank">抽签</a>
+    抽奖标题：
+    <input type="text" id="title" class="ui-dialog-autofocus" value="" placeholder="输入标题,可以为空." /> 抽奖人数：
+    <input type="text" id="personCount" class="ui-dialog-autofocus" value="" placeholder="输入人数,请输入数字." /> 方格宽：
+    <input type="text" id="itemk"> 方格高：
+    <input type="text" id="itemg"> 眼花缭乱模式:
+    <input type="radio" name="ms" style="width:15px;" checked value="50"> 惊心动魄模式:
+    <input type="radio" name="ms" style="width:15px;" value="300">
+    <br>
+    <br> 重置已产生的抽奖数据
+    <input type="checkbox" id="reset" value="1" />
+    <br>
+    <button class="cjms">排除编号</button>
+  </div>
+  <div class="top">
+    <a href="#" target="_blank"></a>
+  </div>
+  <div class="items"></div>
+  <div class="help">
+    <b>
+      <br />
+      <a href="result.html" target="_blank" class="showjg btn">中签结果</a>
+      <a href="javascript:;" class="prev btn">上一轮</a>
+      <a href="javascript:;" class="next btn">下一轮</a>
+    </b>
+  </div>
+  <div style="margin-top:300px">
+    <!-- <a href="javascript:;" class="config opt">开始摇号</a> -->
+  </div>
+  <div class="menu">
+    <div class="ss">
+      <ol class="sequence" start="1">
+        <span class="olTitle">第一轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第二轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第三轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第四轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第五轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第六轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第七轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第八轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第九轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第十轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第十一轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第十二轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第十三轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第十四轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第十五轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第十六轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第十七轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第十八轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第十九轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第二十轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第二十一轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第二十二轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第二十三轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第二十四轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第二十五轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第二十六轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第二十七轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第二十八轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第二十九轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第三十轮</span>
+      </ol>
+
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第三十一轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第三十二轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第三十三轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第三十四轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第三十五轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第三十六轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第三十七轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第三十八轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第三十九轮</span>
+      </ol>
+      <ol class="sequence hide" start="1">
+        <span class="olTitle">第四十轮</span>
+      </ol>
+
+
+      <div>
+
+      </div>
+
+      <div class="hm hide">
+        <div>
+          <span>排除号码(输入编号,多个编号用空格隔开):</span>
+          <textarea id="pchm" cols="45" rows="4"></textarea>
+        </div>
+        <div>
+
+          <audio id="runingmic" class="hide" loop>
+            <source src=".\music\runing.wav">
+          </audio>
+          <audio id="pausemic" class="hide">
+            <source src=".\music\stop.mp3">
+          </audio>
+          <script type="text/javascript" src="./js/jquery.js"></script>
+          <script type="text/javascript" src="./js/jquery.pulsate.min.js"></script>
+          <script type="text/javascript" src="./js/dialog-plus-min.js"></script>
+          <script type="text/javascript" src="./js/app.js"></script>
+
+</body>
+
+</html>

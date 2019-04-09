@@ -1,0 +1,27 @@
+a,div.menu,div.items,div.ss{color:#fff;}
+.ss {
+  background-color: #56070d;
+  border-radius: 10px;
+  opacity: 0.8;
+  padding: 15px 10px 5px 35px;
+  margin-top: 15px;
+}
+.items {
+  margin-top: 30px;
+}
+div.item{
+  background: #56070d;
+  border-radius: 5px;
+}
+div.active{
+  background: #e1eef0;
+  Opacity:0.71;
+  Filter:alpha(opacity=71);
+  color:rgb(54,83,106);}
+div.ignore{
+  background: #ffa200;
+}
+div.active.ignore{
+  background: rgba(225,238,240,0.71);
+  color:rgb(54,83,106);
+}

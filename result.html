@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>中奖结果</title>
+  <style>
+    body {
+      background-image: url('./images/bg2.png');
+      background-size: 100% 100%;
+      margin: 0;
+    }
+
+    .sequence {
+      box-sizing: border-box;
+      white-space: nowrap;
+      width: 100%;
+      display: inline-block !important;
+      color: #fff;
+      opacity: 0.7;
+      padding: 10px 10px;
+      background: #56070d;
+    }
+
+    .sequence li {
+      display: block;
+
+      float: left;
+      margin-left: 0px;
+      width: 50px;
+      text-align: center;
+      font-size: 25px;
+
+
+    }
+
+    .olTitle {
+      line-height: 60px;
+      float: left;
+      display: block;
+      font-size: 25px;
+      display: block;
+    }
+
+    .hide {
+      display: none;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 50px;
+      color: #ffa200;
+      margin-bottom: 20px;
+    }
+  </style>
+  <script type="text/javascript" src="./js/jquery.js"></script>
+</head>
+
+<body>
+  <div class="title">
+    中签结果公示
+  </div>
+  <div id="result">
+  </div>
+  <script>
+    if (localStorage.getItem("sequence")) {
+      $('#result').html(localStorage.getItem("sequence"))
+    }
+  </script>
+</body>
+
+</html>
